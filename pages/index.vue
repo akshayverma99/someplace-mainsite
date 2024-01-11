@@ -116,6 +116,7 @@ a{
 
   .link-container h2{
     text-align: center;
+    font-size: 3.5em;
   }
 
   p{
