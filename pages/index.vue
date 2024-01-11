@@ -1,7 +1,7 @@
 <template>
   <div id="main">
     <div class="header">
-      <h1>SOMEPLACE</h1>
+      <h1><a href="/">SOMEPLACE</a></h1>
     </div>
     # A full screen video background that autoplays and loops
     <video autoplay loop muted :key="current_video">
@@ -9,10 +9,10 @@
     </video>
     <div class="link-container">
       <!-- I need to add a mouseover that changes the current video to aarun.mp4     -->
-      <h2 @mouseover="current_video='/aarun.mp4'">Documentary |</h2>
-      <h2 @mouseover="current_video='/knife%20turning%20test.mp4'">Narrative |</h2>
-      <h2>Corporate |</h2>
-      <h2>About Us |</h2>
+      <h2 @mouseover="current_video='/aarun.mp4'">Documentary <p>|</p></h2>
+      <h2 @mouseover="current_video='/knife%20turning%20test.mp4'">Narrative <p>|</p></h2>
+      <h2>Corporate <p>|</p></h2>
+      <h2>About Us <p>|</p></h2>
     </div>
   </div>
 </template>
@@ -79,6 +79,48 @@
 
 .link-container h2:hover{
   font-size: 5.2em;
+}
+
+/* paragraph is inline */
+p{
+  display: inline;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+}
+
+/* mobile site settings */
+/* The h2's will align in the center and shrink down */
+
+@media only screen and (max-width: 850px) {
+  .link-container{
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    right: 0;
+  }
+
+  .header{
+    left: 0;
+    right: 0;
+    top: 25px;
+    text-align: center;
+  }
+
+  .header h1{
+    font-size: 3em;
+  }
+
+  .link-container h2{
+    text-align: center;
+  }
+
+  p{
+    display: none;
+  }
 }
 
 </style>
