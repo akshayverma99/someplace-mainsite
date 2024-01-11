@@ -4,7 +4,7 @@
       <h1><a href="/">SOMEPLACE</a></h1>
     </div>
     # A full screen video background that autoplays and loops
-    <video autoplay loop muted :key="current_video">
+    <video autoplay="autoplay" loop muted playsinline :key="current_video">
       <source :src="current_video" type="video/mp4">
     </video>
     <div class="link-container">
