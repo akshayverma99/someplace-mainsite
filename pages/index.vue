@@ -4,12 +4,13 @@
       <h1>SOMEPLACE</h1>
     </div>
     # A full screen video background that autoplays and loops
-    <video autoplay loop muted>
-      <source src="/knife%20turning%20test.mp4" type="video/mp4">
+    <video autoplay loop muted :key="current_video">
+      <source :src="current_video" type="video/mp4">
     </video>
     <div class="link-container">
-      <h2>Documentary |</h2>
-      <h2>Narrative |</h2>
+      <!-- I need to add a mouseover that changes the current video to aarun.mp4     -->
+      <h2 @mouseover="current_video='aarun.mp4'">Documentary |</h2>
+      <h2 @mouseover="current_video='/knife%20turning%20test.mp4'">Narrative |</h2>
       <h2>Corporate |</h2>
       <h2>About Us |</h2>
     </div>
@@ -84,6 +85,12 @@
 
 <script>
 export default {
-  name: 'IndexPage'
+  name: 'IndexPage',
+  data() {
+    return {
+      current_video: '/knife%20turning%20test.mp4',
+
+    }
+  },
 }
 </script>
