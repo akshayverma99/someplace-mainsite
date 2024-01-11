@@ -9,7 +9,7 @@
     </video>
     <div class="link-container">
       <!-- I need to add a mouseover that changes the current video to aarun.mp4     -->
-      <h2 @mouseover="current_video='aarun.mp4'">Documentary |</h2>
+      <h2 @mouseover="current_video='/aarun.mp4'">Documentary |</h2>
       <h2 @mouseover="current_video='/knife%20turning%20test.mp4'">Narrative |</h2>
       <h2>Corporate |</h2>
       <h2>About Us |</h2>
@@ -88,7 +88,7 @@ export default {
   name: 'IndexPage',
   data() {
     return {
-      current_video: '/knife%20turning%20test.mp4',
+      current_video: '/aarun.mp4',
 
     }
   },
