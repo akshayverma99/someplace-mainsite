@@ -106,12 +106,12 @@ a{
   .header{
     left: 0;
     right: 0;
-    top: 25px;
+    top: 10px;
     text-align: center;
   }
 
   .header h1{
-    font-size: 3em;
+    font-size: 2em;
   }
 
   .link-container h2{
