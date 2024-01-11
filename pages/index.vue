@@ -119,8 +119,19 @@ a{
     font-size: 3.5em;
   }
 
+  .link-container h2:hover{
+    font-size: 3.5em;
+  }
+
   p{
     display: none;
+  }
+
+/* remove video controls from ios safari and make it not clickable*/
+  video::-webkit-media-controls {
+    display:none !important;
+    -webkit-user-select: none;
+    pointer-events: none;
   }
 }
 
